@@ -39,7 +39,7 @@ type Msg struct {
 // Subscriptions and Options
 
 // Subscription represents a subscription within the NATS Streaming cluster. Subscriptions
-// will be rate matched and follow at-least delivery semantics.
+// will be rate matched and follow at-least once delivery semantics.
 type Subscription interface {
 	ClearMaxPending() error
 	Delivered() (int64, error)
